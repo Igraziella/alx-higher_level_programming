@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 def divisible_by_2(my_list=[]):
-    number = int(input(2))
-    print("the multiples are: ")
-    for i in range(1, 11):
-        print(number*i, end=" ")
+    a = list()
+    for i in my_list:
+        if i % 2 == 0:
+        a.append(True)
+    else:
+        a.append(False)
+        return a
