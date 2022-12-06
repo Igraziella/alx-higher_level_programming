@@ -6,9 +6,9 @@ if __name__ == "__main__":
         print("{:d} argument".format(size - 1), end='')
     else:
         print("{:d} arguments".format(size - 1), end='')
-        if (size - 1 == 0):
-            print('.')
-        else:
-            print('.')
-            for i in range(1, size):
-                print("{}: {}".format(i, sys.argv[i]))
+    if (size - 1 == 0):
+        print('.')
+    else:
+        print(':')
+    for i in range(1, size):
+        print("{}: {}".format(i, sys.argv[i]))
