@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-write("python is cool\n ")
+write("#python is cool\n ")
