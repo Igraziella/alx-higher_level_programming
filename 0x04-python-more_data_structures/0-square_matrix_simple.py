@@ -5,4 +5,5 @@ def square_matrix_simple(matrix=[]):
        new_matrix = matrix
        square_matrix.append(x**2)
        matrix = (map(lambda x: x**2, range(10)))
+       square_matrix = [x**2 for x in range(10)]
        return new_matrix
