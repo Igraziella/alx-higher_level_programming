@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-for num in range(100):
-    if int(num / 10) != num % 10 and int(num / 10) < num % 10:
-        print("{}{}".format(int(num / 10), num % 10), end="")
-        if (num != 89):
-            print(", ", end="")
-            print("")
+#Python program to print all the possible
+#combinations
+from  itertools import permutations
+comb = permutations(range(10), 2)
+
+for i in comb:
+    print(i[0],i[1], end="")
