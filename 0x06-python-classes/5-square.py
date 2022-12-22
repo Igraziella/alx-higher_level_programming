@@ -33,9 +33,9 @@ class Square:
     @property
     def size(self):
         """Getter of the private attribute size"""
-        return self.__size
+        return (self.__size)
 
-    @setter.size
+    @size.setter
     def size(self, value):
         """Setter for the size private attribute"""
         if (type(value) is not int):
