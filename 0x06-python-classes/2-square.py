@@ -3,9 +3,8 @@
 
 
 def __init__(self, size=0):
-    """Instantiation"""
+    """Instantiation of square with size"""
 
-    self.size = 0
     if size != int:
         raise TypeError("size must be an integer")
     elif size < 0:
