@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Class Square with the size, method of area and getter & setter"""
+"""Class Square with the size, method of area and getters & setters"""
 
 
 class Square:
@@ -15,7 +15,7 @@ class Square:
             self.__size = size
 
     def area(self):
-        """method that returns the current square area"""
+        """method that gets the current area of square"""
         return (self.__size ** 2)
 
     @property
@@ -26,9 +26,9 @@ class Square:
     @size.setter
     def size(self, value):
         """Setter for the size of private attribute"""
-        if (type(size) is not int):
+        if (type(value) is not int):
             raise TypeError(size must be an integer)
-        elif (size < 0):
+        elif (value < 0):
             raise ValueError(size must be >= 0)
         else:
             self.__size = value
