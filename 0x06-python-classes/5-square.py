@@ -28,7 +28,7 @@ class Square:
             print()
         else:
             for rows in range(self.__size):
-            print("#" * .__self)
+                print("#" * .__self)
 
     @property
     def size(self):
