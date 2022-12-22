@@ -8,9 +8,9 @@ class Square:
     def __init__(self, size=0):
         """Instantiation of a square with the size"""
         if (type(size) is not int):
-            raise TypeError(size must be an integer)
+            raise TypeError("size must be an integer")
         elif (size < 0):
-            raise ValueError(size must be >= 0)
+            raise ValueError("size must be >= 0")
         else:
             self.__size = size
 
@@ -27,8 +27,8 @@ class Square:
     def size(self, value):
         """Setter for the size of private attribute"""
         if (type(value) is not int):
-            raise TypeError(size must be an integer)
+            raise TypeError("size must be an integer")
         elif (value < 0):
-            raise ValueError(size must be >= 0)
+            raise ValueError("size must be >= 0")
         else:
             self.__size = value
