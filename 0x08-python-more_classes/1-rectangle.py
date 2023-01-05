@@ -2,8 +2,12 @@
 """ Defines a class - Rectangle """
 
 
+
+class Rectangle:
+    """ Represents a rectangle """
+
 def __init__(self, width=0, height=0):
-    """ Instantiation of a new rectangle """
+    """ Instantiates a new rectangle """
 
     @property
     def width(self):
