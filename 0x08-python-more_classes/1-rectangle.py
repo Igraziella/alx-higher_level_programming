@@ -16,7 +16,7 @@ def __init__(self, width=0, height=0):
             raise TypeError(width must be an integer)
         if value < 0:
             raise ValueError(width must be >= 0)
-        return self.__width = value
+        self.__width = value
 
     @property
     def height(self):
@@ -29,4 +29,4 @@ def __init__(self, width=0, height=0):
             raise TypeError(height must be an integer)
         if value < 0:
             raise ValueError(height must be >= 0)
-        return self.__height = value
+        self.__height = value
