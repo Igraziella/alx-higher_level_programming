@@ -12,25 +12,15 @@ class Rectangle:
             width (int) = width of rectangle
             height (int) = height of rectangle """
 
-        self.__width = width
-        self.__height = height
-
-    def area(self):
-        """ Returns the area of a rectangle """
-        return (self.__width * self.__height)
-
-    def perimeter(self):
-        """ Returns the perimeter of a rectangle """
-        if self.__width == 0 or self.__height = 0:
-            return (0)
-        return ((self.__width * 2) + (self.__height * 2))
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
         return self.__width
 
     @width.setter
-    """ sets the width of a rectangle """
+    """ sets the width of the rectangle """
     def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -50,3 +40,11 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        return self.width * self.height
+
+    def perimeter(self):
+        if self.width == 0 or self.height == 0:
+            return 0
+        return (self.width + self.height) * 2
