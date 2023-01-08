@@ -1,23 +1,21 @@
 #!/usr/bin/python3
-""" Class - rectangle """
+""" Rectangle class """
 
 
 class Rectangle:
-    """ Defines a rectangle """
+    """ Defines a Rectangle """
+
+    __width = None
+    __height = None
 
     def __init__(self, width=0, height=0):
-        """ Instantiates a new rectangle
-
-        Args:
-            width (int) = width of rectangle
-            height (int) = height of rectangle """
-
+        """ Creates a new rectangle """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        return self.__width
+        return self.width
 
     @width.setter
     def width(self, value):
@@ -29,9 +27,8 @@ class Rectangle:
 
     @property
     def height(self):
-        return self.__height
+        return self.height
 
-    @height.setter
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -43,6 +40,17 @@ class Rectangle:
         return self.width * self.height
 
     def perimeter(self):
-        if self.width == 0 or self.height == 0:
+        if width == 0 or height == 0:
             return 0
         return (self.width + self.height) * 2
+
+    def __str__(self):
+        """ returns the printable representation of the Rectangle """
+        if width == 0 or height == 0:
+            return ("")
+        else:
+            for row in range(self.height):
+                result += "#" * self.width
+                if (row < self.height - 1):
+                    result += "\n"
+        return result
