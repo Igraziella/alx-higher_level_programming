@@ -43,7 +43,7 @@ class Rectangle:
         """Returns the perimeter of a rectangle"""
         if not self.__height or not self.__width:
             return 0
-        
+
         return (self.__width + self.__height) * 2
 
     def __str__(self):
