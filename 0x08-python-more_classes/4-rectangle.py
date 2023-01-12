@@ -3,9 +3,7 @@
 
 
 class Rectangle:
-    """ Defines a rectangle """
-    __width = width
-    __height = height
+    """ Represents a rectangle """
 
     def __init__(self, width=0, height=0):
         """ Initializes a new rectangle
@@ -15,8 +13,8 @@ class Rectangle:
         width (int) = width of rectangle
         height (int) = height of rectangle """
 
-    self.width = width
-    self.height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -43,24 +41,22 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.width * self.height
+        return self.__width * self.__height
 
     def perimeter(self):
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
-        return (self.width + self.height) * 2
+        return (self.__width + self.__height) * 2
 
     def __str__(self):
-        result = ""
-
-        if self.height == 0 or self.width == 0:
-            result += ''
-        else:
-            for row in range(self.height):
-                result += "#" * self.width
-                if (row < self.height - 1):
-                    result += '\n'
-        return result
+        for i in range(self.area()):
+            if i and not (i % self.__width):
+                print()
+            print('#', end='')
+        return ''
 
     def __repr__(self):
-        return "Rectangle({:d}, {:d})".format(self.width, self.height)
+        string1 = "Rectangle(" + str(self.__width) + ','
+        string2 = str(self.__height) + ')'
+
+        return string1 + ' ' + string2
