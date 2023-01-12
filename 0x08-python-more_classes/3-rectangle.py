@@ -45,12 +45,8 @@ class Rectangle:
         return (self.__width + self.__height) * 2
 
     def __str__(self):
-        """ returns the printable representation of the Rectangle """
-        if self.__width == 0 or self.__height == 0:
-            return ("")
-        else:
-            for row in range(self.__height):
-                result += "#" * self.__width
-                if (row < self.__height - 1):
-                    result += "\n"
-            return result
+        for i in range(self.area()):
+            if i and not (i % self.__width):
+                print()
+            print('#', end='')
+        return ''
