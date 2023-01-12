@@ -4,10 +4,8 @@
 
 class Rectangle:
     """ class Rectangle that defines a rectangle """
-    __height = None
-    __width = None
 
-    def __init__(self, prmWidth=0, prmHeight=0):
+    def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
 
@@ -17,7 +15,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        if not isinstance(prmValue, int):
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
@@ -36,27 +34,27 @@ class Rectangle:
         self.__width = value
 
     def area(self):
-        return self.width * self.height
+        return self.__width * self.__height
 
     def perimeter(self):
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
-        return (self.width + self.height) * 2
+        return (self.__width + self.__height) * 2
 
     def __str__(self):
-        result = ""
+        result = ''
 
-        if self.height == 0 or self.width == 0:
+        if self.__height == 0 or self.__width == 0:
             result += ''
         else:
-            for row in range(self.height):
-                result += "#" * self.width
-                if (row < self.height - 1):
+            for row in range(self.__height):
+                result += "#" * self.__width
+                if (row < self.__height - 1):
                     result += '\n'
         return result
 
     def __repr__(self):
-        return "Rectangle({:d}, {:d})".format(self.width, self.height)
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
         print("Bye rectangle...")

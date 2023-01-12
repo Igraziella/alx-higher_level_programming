@@ -54,4 +54,4 @@ class Rectangle:
             if i and not (i % self.__width):
                 print()
             print('#', end='')
-        return ""
+        return ("")
