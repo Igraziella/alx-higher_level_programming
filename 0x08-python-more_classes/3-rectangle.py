@@ -47,8 +47,11 @@ class Rectangle:
         return (self.__width + self.__height) * 2
 
     def __str__(self):
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+
         for i in range(self.area()):
             if i and not (i % self.__width):
                 print()
             print('#', end='')
-        return ''
+        return ""
