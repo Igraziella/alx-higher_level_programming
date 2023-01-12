@@ -40,13 +40,13 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        if width == 0 or height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width + self.__height) * 2
 
     def __str__(self):
         """ returns the printable representation of the Rectangle """
-        if width == 0 or height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ("")
         else:
             for row in range(self.__height):
