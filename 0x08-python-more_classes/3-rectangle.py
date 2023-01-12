@@ -53,4 +53,4 @@ class Rectangle:
                 result += "#" * self.__width
                 if (row < self.__height - 1):
                     result += "\n"
-        return result
+            return result
