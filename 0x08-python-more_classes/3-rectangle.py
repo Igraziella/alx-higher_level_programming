@@ -1,21 +1,21 @@
 #!/usr/bin/python3
-""" Rectangle class """
+""" Defines a Rectangle class """
 
 
 class Rectangle:
-    """ Defines a Rectangle """
-
-    __width = None
-    __height = None
+    """ Represents a Rectangle """
 
     def __init__(self, width=0, height=0):
-        """ Creates a new rectangle """
+        """ Creates a new rectangle
+        Args:
+            size: length of each side
+        """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        return self.width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -27,7 +27,7 @@ class Rectangle:
 
     @property
     def height(self):
-        return self.height
+        return self.__height
 
     def height(self, value):
         if not isinstance(value, int):
@@ -37,20 +37,20 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.width * self.height
+        return self.__width * self.__height
 
     def perimeter(self):
         if width == 0 or height == 0:
             return 0
-        return (self.width + self.height) * 2
+        return (self.__width + self.__height) * 2
 
     def __str__(self):
         """ returns the printable representation of the Rectangle """
         if width == 0 or height == 0:
             return ("")
         else:
-            for row in range(self.height):
-                result += "#" * self.width
-                if (row < self.height - 1):
+            for row in range(self.__height):
+                result += "#" * self.__width
+                if (row < self.__height - 1):
                     result += "\n"
         return result
