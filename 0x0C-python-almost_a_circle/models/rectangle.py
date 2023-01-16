@@ -86,7 +86,7 @@ class Rectangle(Base):
     def display(self):
         """ Prints the Rectangle using the # character """
         if self.__width == 0 or self.__height == 0:
-            print ("")
+            print("")
             return
 
         [print("") for y in range(self.__y)]
@@ -104,7 +104,7 @@ class Rectangle(Base):
             2nd argument represents width attribute
             3rd argument represents height attribute
             4th argument represents x attribute
-            5th argument represents y attribute        
+            5th argument represents y attribute
             **kwargs (dict): New key/value pairs of attributes.
         """
         if args and len(args) != 0:
@@ -153,5 +153,5 @@ class Rectangle(Base):
     def __str__(self):
         """ retuns the print() and string() representation of the Rectangle """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                        self.x, self.y,
-                                                        self.width, self.height)
+                                                     self.x, self.y,
+                                                     self.width, self.height)
