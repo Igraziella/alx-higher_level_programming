@@ -2,9 +2,10 @@
 -- cities' id must be unique, a primary key, and not null
 -- state id must be a foreign key and not null
 CREATE Database IF NOT EXISTS hbtn_0d_usa;
-CREATE TABLE IF NOT EXISTS hbtn_0d_usa.cities (
-	id INT NOT NULL AUTO_INCREMENT,
+USE hbtn_0d_usa;
+CREATE TABLE IF NOT EXISTS cities (
+	id INT AUTO_INCREMENT,
 	state_id INT NOT NULL,
 	name VARCHAR(256) NOT NULL,
 	PRIMARY KEY (id),
-	FOREIGN KEY (state_id) REFERENCES hbtn_0d_usa.states(id));
+	FOREIGN KEY (state_id) REFERENCES states(id));
