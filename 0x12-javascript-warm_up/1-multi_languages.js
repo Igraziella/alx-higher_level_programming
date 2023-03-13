@@ -1,5 +1,6 @@
 #!/usr/bin/node
-// A script thatn prints 3 lines
+// A script that prints 3 lines
 
-const multiLanguages = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-console.log(multiLanguages);
+console.log('C is fun');
+console.log('Python is cool');
+console.log('JavaScript is amazing');
