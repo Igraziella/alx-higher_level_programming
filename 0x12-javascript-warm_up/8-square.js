@@ -11,4 +11,3 @@ if (isNaN(parseInt(process.argv[2]))) {
     process.stdout.write('\n');
   }
 }
-
