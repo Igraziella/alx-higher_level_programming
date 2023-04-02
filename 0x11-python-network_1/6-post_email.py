@@ -15,4 +15,4 @@ if __name__ == "__main__":
 
     value = {'email'}
     response = requests.post(url, value)
-    html = response.read()
+    print(response.text)
