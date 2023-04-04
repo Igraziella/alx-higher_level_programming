@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-"""A script that:
-- takes in a URL
-- sends a POST request to the passed URL
-- takes email as a parameter
+""" A script that takes in a URL,
+- sends a POST request to the URL passed,
+- takes email as a parameter, and
 - displays the body of the response
 """
 import sys
-import urllib.parse
 import urllib.request
+import urllib.parse
 
 
 if __name__ == "__main__":
