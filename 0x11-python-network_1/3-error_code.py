@@ -4,7 +4,7 @@
 - displays the body of the response (decoded in utf-8).
 """
 import sys
-from urllib import error, requests
+from urllib import error, request
 
 
 if __name__ == "__main__":
