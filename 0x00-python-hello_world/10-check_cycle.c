@@ -4,7 +4,7 @@
  * check_cycle - check if a linked list has a loop
  * @list: first node
  *
- * Return: 1: if linked list have a loop
+ * Return: 1: if linked list has a loop
  *		0: if not
  *
  */
