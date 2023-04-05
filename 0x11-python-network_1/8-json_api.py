@@ -9,16 +9,18 @@ import sys
 
 if __name__ == "__main__":
 
-    letter = sys.argv[1] if len(sys.argv) == 1: else letter = ""
+    if len(sys.argv) > 1: letter = sys.argv[1]
+    else:
+        letter = ""
 
     url = "http://0.0.0.0:5000/search_user"
     value = {"q": letter}
 
-    r = request.post(url, data=value)
+    r = requests.post(url, data=value)
 
     try:
         response = r.json()
-        if response = {}:
+        if response == {}:
             print("No result")
         else:
             print("[{}] {}".format(response.get("id"), response.get("name")))
