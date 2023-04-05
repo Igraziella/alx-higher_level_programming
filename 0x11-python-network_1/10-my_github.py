@@ -5,7 +5,6 @@
 """
 import requests
 import sys
-#from requests.auth import HTTPBasicAuth
 
 
 if __name__ == "__main__":
@@ -13,7 +12,7 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
 
-    headers = {"Authorization": "Basic" + (username + ":" + password)}
+    headers = {"Authorization": "Basic" + (username + " " + password)}
 
     response = requests.get("https://api.github.com/user", headers=headers)
     print(response.json().get("id"))
